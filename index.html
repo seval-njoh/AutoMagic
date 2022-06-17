@@ -1,0 +1,6317 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+	.prod-info-main {
+		border: 1px solid #CEEFFF;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		background: #fff;
+		padding: 6px;
+		-webkit-box-shadow: 0 1px 4px 0 rgba(21,180,255,0.5);
+		box-shadow: 0 1px 1px 0 rgba(21,180,255,0.5);
+	}
+	
+	.prod-info-main .product-image {
+		background-color: #EBF8FE;
+		display: block;
+		min-height: 238px;
+		overflow: hidden;
+		position: relative;
+		border: 1px solid #CEEFFF;
+		padding-top: 40px;
+	}
+	
+	
+	.prod-info-main .product-deatil {
+		border-bottom: 1px solid #dfe5e9;
+		padding-bottom: 17px;
+		padding-left: 16px;
+		padding-top: 16px;
+		position: relative;
+		background: #fff
+	}
+	
+	.product-content .product-deatil h5 a {
+		color: #2f383d;
+		font-size: 5px;
+		line-height: 10px;
+		text-decoration: none;
+		padding-left: 0;
+		margin-left: 0
+	}
+	
+	.prod-info-main .product-deatil h5 a span {
+		color: #9aa7af;
+		display: block;
+		font-size: 15px;
+	}
+	
+	.prod-info-main .product-deatil span.tag1 {
+		border-radius: 50%;
+		color: #fff;
+		font-size: 5px;
+		height: 50px;
+		padding: 13px 0;
+		position: absolute;
+		right: 10px;
+		text-align: center;
+		top: 10px;
+		width: 50px
+	}
+	
+	.prod-info-main .product-deatil span.sale {
+		background-color: #21c2f8
+	}
+	
+	.prod-info-main .product-deatil span.discount {
+		background-color: #71e134;
+	
+		
+	}
+	
+	.prod-info-main .product-deatil span.hot {
+		background-color: #fa9442
+	}
+	
+	.prod-info-main .description {
+		font-size: 12.5px;
+		line-height: 20px;
+		padding: 10px 14px 16px 19px;
+		background: #fff
+	}
+	
+	.prod-info-main .product-info {
+		padding: 11px 19px 10px 20px
+	}
+	
+	.prod-info-main .product-info a.add-to-cart {
+		color: #2f383d;
+		font-size: 13px;
+		padding-left: 16px
+	}
+	
+	.prod-info-main name.a {
+		padding: 5px 10px;
+		margin-left: 16px
+	}
+	
+	.product-info.smart-form .btn {
+		padding: 6px 12px;
+		margin-left: 12px;
+		margin-top: -10px
+	}
+	
+	.load-more-btn {
+		background-color: #21c2f8;
+		border-bottom: 2px solid #037ca5;
+		border-radius: 2px;
+		border-top: 2px solid #0cf;
+		margin-top: 20px;
+		padding: 9px 0;
+		width: 100%
+	}
+	
+	.product-block .product-deatil p.price-container span,
+	.prod-info-main .product-deatil p.price-container span,
+	.shipping table tbody tr td p.price-container span,
+	.shopping-items table tbody tr td p.price-container span {
+		color: #21c2f8;
+		font-family: Lato, sans-serif;
+		font-size: 24px;
+		line-height: 20px
+	}
+	
+	.product-info.smart-form .rating label {
+		margin-top:15px;
+		
+	}
+	
+	.prod-wrap .product-image span.tag2 {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		padding: 10px 0;
+		color: #fff;
+		font-size: 11px;
+		text-align: center
+	}
+	
+	.prod-wrap .product-image span.tag3 {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		width: 65px;
+		height: 40px;
+		border-radius: 50%;
+		padding: 10px 0;
+		color: #fff;
+		font-size: 10px;
+		text-align: center
+	}
+	
+	.prod-wrap .product-image span.sale {
+		background-color: #57889c;
+	}
+	
+	.prod-wrap .product-image span.hot {
+		background-color: #a90329;
+	}
+	
+	.prod-wrap .product-image span.special {
+		background-color: #3B6764;
+	}
+	.shop-btn {
+		position: relative
+	}
+	
+	.shop-btn>span {
+		background: #a90329;
+		display: inline-block;
+		font-size: 10px;
+		box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+		font-weight: 700;
+		border-radius: 50%;
+		padding: 2px 4px 3px!important;
+		text-align: center;
+		line-height: normal;
+		width: 19px;
+		top: -7px;
+		left: -7px
+	}
+	
+	.product-deatil hr {
+		padding: 0 0 5px!important
+	}
+	
+	.product-deatil .glyphicon {
+		color: #3276b1
+	}
+	
+	.product-deatil .product-image {
+		border-right: 0px solid #fff !important
+	}
+	
+	.product-deatil .name {
+		margin-top: 0;
+		margin-bottom: 0
+	}
+	
+	.product-deatil .name small {
+		display: block
+	}
+	
+	.product-deatil .name a {
+		margin-left: 0
+	}
+	
+	.product-deatil .price-container {
+		font-size: 24px;
+		margin: 0;
+		font-weight: 300;
+		
+	}
+	
+	.product-deatil .price-container small {
+		font-size: 12px;
+		
+	}
+	
+	.product-deatil .fa-2x {
+		font-size: 16px!important
+	}
+	
+	.product-deatil .fa-2x>h5 {
+		font-size: 9px;
+		margin: 0
+	}
+	
+	.product-deatil .fa-2x+a,
+	.product-deatil .fa-2x+a+a {
+		font-size: 13px
+	}
+	
+	.product-deatil .certified {
+		margin-top: 10px
+	}
+	
+	.product-deatil .certified ul {
+		padding-left: 0
+	}
+	
+	.product-deatil .certified ul li:not(first-child) {
+		margin-left: -3px
+	}
+	
+	.product-deatil .certified ul li {
+		display: inline-block;
+		background-color: #f9f9f9;
+		padding: 13px 19px
+	}
+	
+	.product-deatil .certified ul li:first-child {
+		border-right: none
+	}
+	
+	.product-deatil .certified ul li a {
+		text-align: left;
+		font-size: 12px;
+		color: #6d7a83;
+		line-height: 16px;
+		text-decoration: none
+	}
+	
+	.product-deatil .certified ul li a span {
+		display: block;
+		color: #21c2f8;
+		font-size: 13px;
+		font-weight: 700;
+		text-align: center
+	}
+	
+	.product-deatil .message-text {
+		width: calc(100% - 70px)
+	}
+	/*--Button effect classes for add to cart*/ 
+	.btn-cart{
+		border-radius: 0;
+		position: relative;
+		color: #fff;
+		border:1px solid transparent;
+		text-transform: uppercase;
+		transition: all 0.40s ease 0s;
+	}
+	.btn-cart:after{
+		content: "\f07a";
+		font-family: fontawesome;
+		position: absolute;
+		right: 6px;
+		top: -4px;
+		opacity: 0;
+		color: #fff;
+		transition: all 0.40s ease 0s;
+	}
+	.btn-cart:hover:after{
+		top:40%;
+		opacity: 5;
+	}
+	.btn-cart span{
+		display: block;
+		transition: all 0.70s linear 0s;
+	}
+	.btn-cart:hover span{
+		transform: translate(-9px);
+	}
+	
+	/*--Button effect classes for More info*/ 
+	.btn-info{
+		border-radius: 0;
+		position: relative;
+		color: #fff;
+		border:1px solid transparent;
+		text-transform: uppercase;
+		transition: all 0.40s ease 0s;
+	}
+	.btn-info:after{
+		content: "\f129";
+		font-family: fontawesome;
+		position: absolute;
+		right: 6px;
+		top: -4px;
+		opacity: 0;
+		color: #fff;
+		transition: all 0.40s ease 0s;
+	}
+	.btn-info:hover:after{
+		top:40%;
+		opacity: 5;
+	}
+	.btn-info span{
+		display: block;
+		transition: all 0.70s linear 0s;
+	}
+	.btn-info:hover span{
+		transform: translate(-9px);
+	}
+	
+	@media only screen and (min-width:1024px) {
+		.prod-info-main div[class*=col-md-4] {
+			padding-right: 0
+		}
+		.prod-info-main div[class*=col-md-8] {
+			padding: 0 13px 0 0
+		}
+		.prod-wrap div[class*=col-md-5] {
+			padding-right: 0
+		}
+		.prod-wrap div[class*=col-md-7] {
+			padding: 0 13px 0 0
+		}
+		.prod-info-main .product-image {
+			border-right: 1px solid #dfe5e9
+		}
+		.prod-info-main .product-info {
+			position: relative
+		}
+	}
+
+
+
+	img {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+#rl  {
+float: right;    
+ margin: 0 0 0 15px;
+}
+
+
+#zoomA {
+  /* (A) OPTIONAL DIMENSIONS */
+  width: 160px;
+  height: auto;
+ 
+  /* (B) ANIMATE ZOOM */
+  /* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.3s;
+}
+ 
+/* (C) ZOOM ON HOVER */
+#zoomA:hover { transform: scale(1.2); }
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+     
+    /* Styling the area of the slides */
+     
+    #slideshow {
+        overflow: hidden;
+        height: 610px;
+        width: 728px;
+        margin: 0 auto;
+		
+    }
+     
+    /* Style each of the sides
+    with a fixed width and height */
+     
+    .slide {
+        float: left;
+        height: 510px;
+        width: 728px;
+    }
+     
+    /* Add animation to the slides */
+     
+    .slide-wrapper {
+         
+        /* Calculate the total width on the
+      basis of number of slides */
+        width: calc(728px * 4);
+         
+        /* Specify the animation with the
+      duration and speed */
+        animation: slide 10s ease infinite;
+    }
+     
+    /* Set the background color
+    of each of the slides */
+     
+   
+    /* Define the animation
+    for the slideshow */
+     
+    @keyframes slide {
+         
+        /* Calculate the margin-left for
+      each of the slides */
+        20% {
+            margin-left: 0px;
+        }
+        40% {
+            margin-left: calc(-728px * 1);
+        }
+        60% {
+            margin-left: calc(-728px * 2);
+        }
+        80% {
+            margin-left: calc(-728px * 3);
+        }
+    }
+
+
+	.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(0, 0, 0);    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body style="background-color: darkgray;">
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<img src="automagicsymbol.png" align="center" style="width: 1505px;">
+
+
+
+
+
+
+<h1 style="text-align: center; color: darkgreen; font-size: 55px;"><b>AutoMagic of Long Island: <strong>Commercial Catalog </strong></b></h1>
+
+
+<p style="text-align: center; color: red; font-size: 45px;"><u>Call to Order: 631-319-1143</u>
+</p>
+<p style="text-align: center;"><strong>(Call for prices on different sizes!)</p></strong>	
+
+
+<!-- Define the slideshow container -->
+<p style="text-align: center; color: red; font-size: 38px;"><b><span class="blinking">Products of the Month!</span></b></p>
+<div id="slideshow">
+	<div class="slide-wrapper">
+		 
+		<!-- Define each of the slides
+	 and write the content -->
+		<div class="slide">
+			<h1 class="slide-number">
+				<img src="ridit.png" width="700px" height="500px">
+				<a href="file:///C:/Users/16318/Boostrap/Rid%20It/index.html">Tec #286</a>
+			</h1>
+		</div>
+		<div class="slide">
+			<h1 class="slide-number">
+				<img src="cm1200.jpg" width="700px" height="500px">
+				<a href="file:///C:/Users/16318/Boostrap/CM1200/index.html">Part #CM1200</a>
+			</h1>
+		</div>
+		<div class="slide">
+			<h1 class="slide-number">
+
+				<img src="cm2200.jpg" width="700px" height="500px">
+				<a href="file:///C:/Users/16318/Boostrap/CM2200/index.html">Part #2200</a>
+			</h1>
+		</div>
+		<div class="slide">
+			<h1 class="slide-number">
+				<img src="45magic.jpg" width="700px" height="500px">
+				<a href="file:///C:/Users/16318/Boostrap/Ceramic/index.html">Part #45</a>
+			</h1>
+		</div>
+	</div>
+</div>
+
+
+<br><br>
+
+
+<div class="topnav" id="myTopnav">	
+<a href="#Wheel_Cleaners">Wheel Cleaners</a>
+<a href="#Specialty">Specialty</a>
+<a href="#Wax">Wax</a>
+<a href="#Dressings_Protectants">Dressings</a>
+<a href="#Cleaners">Cleaners</a>
+<a href="#Clay">Clay Lubricant</a>
+<a href="#Polishes">Polishes</a>
+<a href="#Interiors">Interiors</a>
+<a href="#Compounds">Compounds</a>
+<a href="#Brushes">Brushes</a>
+<a href="#Odor_Eliminators">Odor</a>
+
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+
+	<div class="container"></div>
+		<div class="col-xs-12 col-md-6">
+			<!-- First product box start here-->
+			<div class="prod-info-main prod-wrap clearfix">
+				<div class="row">
+						<div class="col-md-5 col-sm-12 col-xs-12">
+							<div class="product-image">
+								<img src="PC1.jpg" class="img-responsive" width="80px"> 
+								<span class="tag3 special">
+									Auto Magic #501201
+								</span> 
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12 col-xs-12">
+						<div class="product-deatil">
+								<h5 class="name">
+									<a href="#">
+										501201
+									</a>
+									<a href="#">
+										<span>Compounds</span>
+									</a>                            
+		
+								</h5>
+								<p class="price-container">
+									<span>$46.85</span>
+								</p>
+								<span class="">Best Selling</span> 
+						</div>
+						<div class="description">
+							<p><ul>
+								<li>Levels sandpaper marks, scratches, acid rain, & paint imperfections.</li>
+								
+								<li>Safe to use on RVs, boats, motorcycles, bikes, & painted surfaces.</li>
+							</ul></p>
+						</div>
+						<div class="product-info smart-form">
+							<div class="row">
+								
+									<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+									<a href="file:///C:/Users/16318/Boostrap/PC1/index.html" class="btn btn-info">More info</a>
+								</div>	<div class="col-md-12">
+									<br><form action="/action_page.php">
+										<p style="font-size: smaller;">
+											<label for="sizes">Select an amount below:</label>
+											<select id="size" name="size" size="1">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="5+">5+</option>
+										</select>
+									
+										</p></form>
+									
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- end product -->
+		</div>	
+
+						
+	<div class="col-xs-12 col-md-6">
+		<!-- First product box start here-->
+		<div class="prod-info-main prod-wrap clearfix">
+			<div class="row">
+					<div class="col-md-5 col-sm-12 col-xs-12">
+						<div class="product-image"> 
+							<img src="2501better.jpg" class="img-responsive" width="250px"> 
+							<span class="tag3 special">
+								 #2501H
+							</span> 
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-12 col-xs-12">
+					<div class="product-deatil">
+							<h5 class="name">
+								<a href="#">
+									Ocean Polymer (64 oz)
+	 <span>Protective Coating</span>
+								</a>
+							</h5>
+							<p class="price-container">
+								<span>$40.75</span>
+							</p>
+							<span class="tag1"></span> 
+							<span class="">Best Selling</span> 
+						</div>
+					<div class="description">
+						<p><ul>
+	<li>Extended Road Salt, Sea Spray, UV Protection</li>
+	<li>Deep Showroom Shine and Luster</li>
+	<li>Use To Protect & Shine Cars, Trucks, Boats, Watercraft, Snow Machines</li>
+	
+	
+						</ul></p>
+					</div>
+					<div class="product-info smart-form">
+						<div class="row">
+							<div class="col-md-12"> 
+								<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+								<a href="file:///C:/Users/16318/Boostrap/2501/2501.html" class="btn btn-info">More info</a>
+										
+										</p></form>
+										<form action="/action_page.php">
+											<p style="font-size: smaller;">
+												<label for="sizes">Select an amount below:</label>
+												<select id="size" name="size" size="1">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="5+">5+</option>
+											</select>
+										
+											</p></form>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end product -->
+	</div>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container"></div>
+
+			<div class="col-xs-12 col-md-6">
+				<!-- First product box start here-->
+				<div class="prod-info-main prod-wrap clearfix">
+					<div class="row">
+							<div class="col-md-5 col-sm-12 col-xs-12">
+								<div class="product-image">
+									<img src="PC2.jpg" class="img-responsive" width="80px"> 
+									<span class="tag3 special">
+										Auto Magic #501202
+									</span> 
+								</div>
+							</div>
+							<div class="col-md-7 col-sm-12 col-xs-12">
+							<div class="product-deatil">
+									<h5 class="name">
+										<a href="#">
+											501202
+										</a>
+										<a href="#">
+											<span>Compounds</span>
+										</a>                            
+			
+									</h5>
+									<p class="price-container">
+										<span>$39.00</span>
+									</p>
+									<span class="">Best Selling</span> 
+							</div>
+							<div class="description">
+								<p><ul>
+									<li>Removes 2000 grit sandpaper marks, scratches.</li>
+								
+									<li>Safe to use on RVs, boats, motorcycles, bikes.</li>
+								</ul> </p>
+							</div>
+							<div class="product-info smart-form">
+								<div class="row">
+									<div class="col-md-12"> 
+										<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+										<a href="file:///C:/Users/16318/Boostrap/PC2/index.html" class="btn btn-info">More info</a>
+									</div>	<div class="col-md-12">
+								 
+									<form action="/action_page.php">
+										<br>	<p style="font-size: smaller;">
+											<label for="sizes">Select an amount below:</label>
+											<select id="size" name="size" size="1">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="5+">5+</option>
+										</select>
+									
+										</p></form>
+										
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<!-- end product -->
+			
+		</div>
+
+	</div>	
+</div>
+
+</div>
+
+
+				<div class="col-xs-12 col-md-6">
+					<!-- First product box start here-->
+					<div class="prod-info-main prod-wrap clearfix">
+						<div class="row">
+								<div class="col-md-5 col-sm-12 col-xs-12">
+									<div class="product-image">
+										<img src="PC3.jpg" class="img-responsive" width="80px"> 
+										<span class="tag3 special">
+											Auto Magic #501203
+										</span> 
+									</div>
+								</div>
+								<div class="col-md-7 col-sm-12 col-xs-12">
+								<div class="product-deatil">
+										<h5 class="name">
+											<a href="#">
+												501203
+											</a>
+											<a href="#">
+												<span>Polishes, Waxes </span>
+											</a>                            
+				
+										</h5>
+										<p class="price-container">
+											<span>$38.85</span>
+										</p>
+										<span class="">Best Selling</span> 
+								</div>
+								<div class="description">
+									<p><ul>
+										<li>Compound scratches & swirls & adds color depth to the finish.</li>
+										
+										<li>Safe to use on RVs, boats, motorcycles, bikes.</li>
+									</ul>   </p>
+								</div>
+								<div class="product-info smart-form">
+									<div class="row">
+										<div class="col-md-12"> 
+											<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+											<a href="file:///C:/Users/16318/Boostrap/PC3/index.html" class="btn btn-info">More info</a>
+										</div>	<div class="col-md-12">
+											<form action="/action_page.php">
+												<br>	<p style="font-size: smaller;">
+													<label for="sizes">Select an amount below:</label>
+													<select id="size" name="size" size="1">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="5+">5+</option>
+												</select>
+											
+												</p></form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+								
+						
+					<!-- end product -->
+			
+		</div>
+	
+
+	</div></div>
+				
+	
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="cm1200.jpg" class="img-responsive" width="165px"> 
+						<span class="tag3 special">
+							Auto Magic #CM1200
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Clay Magic Detailing Clay Medium Grade</a>
+								<a href="#">
+					 <span>Surface Preparation </span></a>
+							
+						</h5>
+						<p class="price-container">
+							<span>$33.95</span>
+						</p>
+						<span class="">Best Selling</span>  
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Efficiently removes tree sap mist, bug residue, paint overspray</li>
+<li>Serves as a polisher for car detailing and lasts up to 20 details</li>
+<li>Works with glass, chrome, fiberglass, plastic, acrylic, enamel, and more</li>
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/CM1200/index.html" class="btn btn-info">More info</a>
+						</div>	<div class="col-md-12">
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+								</p></form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>				
+
+</div>
+
+</div>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="cm2200.jpg" class="img-responsive" width="120px" id="zoomA"> 
+						<span class="tag3 special">
+							Auto Magic #CM2200
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Clay Magic Detailing Clay Fine-Grade</a>
+								<a href="#">
+									<span>Surface Preparation</span></a>
+							
+						</h5>
+						<p class="price-container">
+							<span>$33.95
+								
+							</span>
+						</p>
+						<span class="">Best Selling</span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Removes light to moderate stubborn dirt and more</li>
+							<li>Excellent for removing overspray from glass, chrome and paint</li>
+							<li>Removes: Overspray, rail dust, industrial fall-out, tar, tree sap mist and surface rust</li>
+					
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/CM2200/index.html" class="btn btn-info">More info</a>
+						</div>	<div class="col-md-12">
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+								
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="tec580ceramic.png" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							 TEC580-02
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								XPC3 CERAMIC COATING
+ <span> Ceramics  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$34.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Purest form of surface protection you can apply to your vehicle</li>
+<li>Year of protection against all environmental attacks</li>
+<li>Easy to use, no experience required</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/T580/index.html" class="btn btn-info">More info</a>
+									
+									</p></form>
+									<form action="/action_page.php">
+										<p style="font-size: smaller;">
+											<label for="sizes">Select an amount below:</label>
+											<select id="size" name="size" size="1">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="5+">5+</option>
+										</select>
+									
+										</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- end product -->
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="45magic.jpg" class="img-responsive" width="100px" id="zoomA"> 
+						<span class="tag3 special">
+							Auto Magic #45
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Ceramic Magic</a>
+								<a href="#">
+									<span> Ceramic Spray 
+									</span></a>
+							
+						</h5>
+						<p class="price-container">
+							<span>$34.95</span><span>  Gallon</span>
+						</p>
+						<span class="">Best Selling</span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Can be diluted up to 4 to 1. Creates up to 5 Gallons.</li>
+						<li>Water-repellant spray excellent for exterior painted surfaces</li>
+
+						
+
+						</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Ceramic/index.html" class="btn btn-info">More info</a>
+						</div>	<div class="col-md-12">
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+							
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>				
+		</div>
+		
+	</div>
+</div>
+		
+<!-- end product -->
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="BC278A.jpg" class="img-responsive" width="140px" id="zoomA"> 
+						<span class="tag3 special">
+							Auto Magic #78
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								BC-2</a>
+								<a href="#"><span>Waxes & Polishes </span></a>
+							
+						</h5>
+						<p class="price-container">
+							<span>$53.95</span> <span>   Gallon</span>
+						</p>
+						<span class="">Best Selling</span>  
+				</div>
+				<div class="description">
+					<p><ul>
+					
+						<li>Removes light scratches and swirls while adding long-lasting high gloss</li>
+						<li>	May be applied by hand, orbital buffer, or variable speed polisher</li>
+							<li>Works well with wool or foam pads</li>
+						
+					</ul>	</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+						
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/BC2/index.html" class="btn btn-info">More info</a>
+						</div>	<div class="col-md-12">
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>				
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+	<!-- end product -->
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="42ironclear.jpeg" class="img-responsive" width="190px"> 
+						<span class="tag3 special">
+							Auto Magic #42
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Iron Clear</a>
+								<a href="#"><span>Exterior </span></a>
+							
+						</h5>
+						<p class="price-container">
+							<span>$89.95</span> <span>  Gallon</span>
+						</p>
+						<span class="">Best Selling</span>  
+				</div>
+				<div class="description">
+					<p><ul>
+						
+						<li>OEM painted surfaces, chrome, stainless steel and aluminum trim.</li>
+						<li>RVs, boats, motorcycles, ATVs and commercial vehicles.</li>
+						<li>Designed for safe removal of iron particles, brake dust, and contaminants</li>
+
+	</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Iron/index.html" class="btn btn-info">More info</a>
+						</div>	<div class="col-md-12">
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- end product -->
+
+
+</div>				
+</div>
+</div>
+</div>
+</div>
+
+						
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+	<!-- end product -->
+
+
+						
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- end product -->
+	<p style="font-size: 120px; color: black; text-align: center;"><u>All Products</u></p>
+
+<br><br><br>
+
+	<p id="Wheel_Cleaners" style="font-size: 30px; color: black; text-align: left;"><u><i>Wheel Cleaners</i></u></p>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="60xpnew.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #60
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								XP COOL BLUE <span>Dressing</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$49.00</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>A premium, water-based thick dressing</li>
+<li>Add shine to tires, moldings, vinyl, rubber bumpers</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+                            <a href="file:///C:/Users/16318/Boostrap/60xp/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="1gallon">1 Gallon</option>
+										
+										<option value="5gallons">Pail $225.00 (60-5)</option>
+										
+									</select>
+								
+									</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="magnew.jpg" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							Auto Magic #48
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								MAGnificent
+ <span> Wheel Cleaner  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$33.40</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>For use on coated, chrome, painted, plastic & steel wheels. </li>
+	<li>Excellent for use on white walls and raised white lettering.</li>
+	
+						</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="file:///C:/Users/16318/Desktop/New%20folder/New%20folder/index.html" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Magnificient/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+									
+										<option value="1gallon">1 Gallon</option>
+										<option value="5gallons">Pail</option>
+										<option value="55gallons">55 Gallons</option> 
+									</select>
+									
+									</p></form>
+								
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+	
+
+
+<p id="Specialty" style="font-size: 30px; color: black; text-align: left;"><u><i>Specialty</i></u></p>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="25enzyme.jpg" class="img-responsive" width="130px"> 
+						<span class="tag3 special">
+							Auto Magic #25
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Enzyme Pre-Spot
+ <span> Interior </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$97.35</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>A professional carpet, fabric and upholstery spot cleaner</li>	
+<li>Consumes the toughest, food, grass, soil, blood, pet stains</li>	
+<li>Makes 32 gallons when diluted</li> 	
+
+
+					</ul></p>
+				</div>
+			
+			<div class="product-info smart-form">
+				<div class="row">
+					<div class="col-md-12"> 
+						<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+						<a href="file:///C:/Users/16318/Desktop/automagic/Enzyme%20Pre%20Spot/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="quart">1 Quart</option>
+										<option value="1gallon">1 Gallon</option>
+							
+									</select>
+									
+									</p></form>
+								
+
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="bc1.jpeg" class="img-responsive" width="225px"> 
+						<span class="tag3 special">
+							Auto Magic #77
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								BC-1 Cleaner 
+ <span>Interior </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$43.45</span><span>  Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>1st step in removing oxidation, scratches & paint imperfections from paint finishes</li>	
+<li>Works well with wool or foam cutting pads</li>	 	
+
+
+					</ul></p>
+				</div>
+			
+			<div class="product-info smart-form">
+				<div class="row">
+					<div class="col-md-12"> 
+						<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+						<a href="file:///C:/Users/16318/Boostrap/BC1/index.html" class="btn btn-info">More info</a>
+						<form action="/action_page.php">
+							<br>	<p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>2
+									<option value="3">3</option>3
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+								
+
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="tec70-02.jpg" class="img-responsive" width="200px"> 
+						<span class="tag3 special">
+							TEC70-02
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								BLACK FUSION
+ <span>Vinyl, Plastic, Molding Coating</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$14.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Restores faded plastic & protects</li>
+<li>Will not wash off!</li>
+<li>Does not fade</li>
+<li>Cures hard</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Tec70/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select an amount below:</label>
+										<select id="size" name="size" size="1">
+										<option value="1">1</option>
+										<option value="2">2</option>2
+										<option value="3">3</option>3
+										<option value="5+">5+</option> 5+
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="38black.jpg" class="img-responsive" width="85px"> 
+						<span class="tag3 special">
+							Auto Magic #38-02
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								VINYL COAT BLACK <span>Vinyl Coating</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$31.90</span><span>   16 oz</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Durable plastic coating formulated for use on automobile tops, interiors, trim panels, and body moldings</li> 
+<li>When applied properly, Black Vinyl Coat will not fade, crack or chip.</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+                            <a href="file:///C:/Users/16318/Boostrap/38vinyl/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select an amount below:</label>
+										<select id="size" name="size" size="1">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="5+">5+</option>
+									</select>
+									
+									</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="61new.jpg" alt="194x228" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #61
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Xtreme Dress-It<span>Vinyl & Tire</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$43.00</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Water-based, silicone dressing is ideal for tires, exterior molding, rubber, and vinyl trim</li>
+<li>Provides high gloss while restoring original beauty</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+                            <a href="file:///C:/Users/16318/Boostrap/Xtreme/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+							
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail ($185.00) (#61-5)</option>
+										
+									</select>
+									
+									</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="600new.jpg" alt="194x228" class="img-responsive" width="120px"> 
+						<span class="tag3 special">
+							Auto Magic #600
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								WATER SPOT REMOVER
+ <span>Exterior</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$45.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Formulated to remove water spotting & surface acid rain</li>
+						<li>Will quickly & easily remove hard water spots & acid rain contamination</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+                            <a href="file:///C:/Users/16318/Boostrap/Water%20Spot/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+									
+										<option value="1gallon">1 Gallon</option>
+										<option value="5gallons">Pail $218.95 (#600-5)</option>
+									
+									</select>
+									
+									</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+<p style="font-size: 30px; color: black;"><u><i>Odor Eliminators</i></u></p>
+<div id="Odor_Eliminators">
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="ridit.png" class="img-responsive" width="170px"> 
+						<span class="tag3 special">
+							TEC286
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								RID IT DEODORIZING KIT
+ <span>Odor Removal </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$27.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul> 
+						<li>A new generation of chlorine dioxide odor removal</li>
+							<li>Fast, 1 Hour Treatment Time Consistent Delivery </li>
+								
+						
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Rid%20It/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+</div>
+
+
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="37odor.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #37
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Odor Eliminator
+ <span> Odor Removal </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$38.45 </span> <span>Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Control & Eliminate Stubborn Odors</li>
+<li>Works Great on Smoke Smells</li>
+
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Odor%20Eliminator/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+</div>
+</div>
+
+
+
+
+
+
+			<p id="Wax" style="font-size: 30px; color: black; text-align: left;"><u><i>Waxes & Polymers</i></u></p>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="24purpleblaze.jpg" class="img-responsive" width="130px"> 
+						<span class="tag3 special">
+							Auto Magic #24
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Purple Blaze
+ <span> Waxes, Polymers, & Sealants </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$38.65</span><span>  Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+
+	<li>Will flash quickly, allowing a speedy and easy removal.</li>
+<li>This dust-free product is perfect for all paint finishes</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Purple%20Blaze/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+									
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="22strawberry.jpg" class="img-responsive" width="155px"> 
+						<span class="tag3 special">
+							Auto Magic #22
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Strawberry Wet Wax
+ <span>Waxes, Polymers, & Sealants</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$45.95</span><span>  Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+	<li>High-gloss wax for clear coats and paint finishes</li>
+
+					<li>Safe to use on RVs, boats, motorcycles, bikes</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Strawberry%20Wax/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+								
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="15wax.jpg" class="img-responsive" width="160px"> 
+						<span class="tag3 special">
+							Auto Magic #15
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								EZ Wax
+ <span>Waxes, Polymers, & Sealants </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$26.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul> 
+						<li>A premium carnauba wax which produces a glossy, wet-looking surface.</li>
+							<li>Contains advanced polymers for extra long-lasting protection. </li>
+								
+						
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/EZ%20Wax%2015/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="10qt.jpeg" class="img-responsive" width="195px"> 
+						<span class="tag3 special">
+							Auto Magic #10
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Paint Sealant
+ <span>Polymers</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$31.65</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Quick dry formula combines superior, long lasting gloss with maximum durability</li>
+<li>Paint Sealant is easy to use, unlike other sealants</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Paint%20Sealant/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="96.jpeg" class="img-responsive" width="195px"> 
+						<span class="tag3 special">
+							Auto Magic #96
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Watermelon Magic Mist
+ <span>Waxes</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$36.35</span><span>   Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Adds instant gloss to clearcoat paint, chrome, wheels and painted plastic panels</li>
+<li>Great for removing light dust, fingerprints and smudges
+</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/96Watermelon/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="90XP.jpg" class="img-responsive" width="169px"> 
+						<span class="tag3 special">
+							Auto Magic #90
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								XP Swirl Remover
+ <span> Leveling Wax  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$53.68</span><span>   Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Mild abrasive to help flatten out (remove) swirls left from using wool pads</li>
+	<li>High shine, wet look finish that will impress the best</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Swirl%20Remover/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option> 
+								</select>
+								
+								</p></form>
+									
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+<p style="font-size: 30px; color: black; text-align: left;"><u><i>Dressing & Protectants</i></u></p>
+<div id="Dressings_Protectants">
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="41dressit.jpg" class="img-responsive" width="165px"> 
+						<span class="tag3 special">
+							Auto Magic #41
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Dress It
+ <span> Dressings & Protectants </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$33.95</span>
+						</p>
+						<span class="tag1">41</span> 
+				</div>
+				<div class="description">
+					<p><ul>
+
+
+	<li>Will deepen the color & enhance the tires for a classic look.</li> 
+		<li>Ready to use & adds gloss to vinyl, rubber & plastic.</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Body%20Shop/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option>
+										<option value="5gallons">Pail $149.93 (#41-5)</option>
+										
+									</select>
+									
+									</p></form>
+									
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="33magic.jpeg" class="img-responsive" width="190px"> 
+						<span class="tag3 special">
+							Auto Magic #33
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Magic Dressing
+ <span> Dressings & Protectants </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$77.95</span>
+						</p>
+						<span class="tag1">33</span> 
+				</div>
+				<div class="description">
+					<p><ul>
+
+
+	<li>Longlasting, high-gloss, solvent-based silicone dressing</li> 
+		<li>Restores luster and adds weather resistant protection</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Magic%20Dressing/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option>
+										<option value="5gallons">Pail $149.93 (#41-5)</option>
+										
+									</select>
+									
+									</p></form>
+								
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="58new.jpg" class="img-responsive" width="125px"> 
+						<span class="tag3 special">
+							Auto Magic #58
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Leather Conditioner
+ <span> Dressings & Protectants  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$48.35</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Formulated for use on all leather interiors.</li> 
+	<li>Maintain the beauty and durability of fine leather</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Leather%20Conditioner/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+											<option value="1gallon">1 Gallon</option>
+										<option value="1quart">1 Quart $12.92 (58QT)</option>
+										
+									</select>
+									
+									</p></form>
+								
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="62new.jpg" class="img-responsive" width="115px"> 
+						<span class="tag3 special">
+							Auto Magic #62
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Universal Dressing
+ <span> Dressings & Protectants  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$32.00</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Great for use on vinyl, rubber and plastic</li>
+<li>Excellent for use on interior dashboards</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Universal%20Dressing/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="501490new.jpg" class="img-responsive" width="110px"> 
+						<span class="tag3 special">
+							Auto Magic #501490
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Cool Dress-It
+ <span>Dressings & Protectants</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$43.00</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Great for Interior and Exterior surfaces</li>
+						<li>Stain resistant and can be used on tires, rubber moldings</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Cool%20Dress%20It/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+								
+									</p></form>
+									
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="65dress.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #65
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Super Dress-It
+ <span> Dressings & Protectants  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$52.00
+
+							</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Superior all-purpose, water-based silicone dressing</li>
+	<li>Restores original beauty to vinyl upholstery and trim</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Super%20Dress%20It/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail ($195.00)(#65-5)</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="font-size: 30px; color: black; text-align: left;"><u><i>Cleaners</i></u></p>
+<div id="Cleaners">
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="777.jpeg" class="img-responsive" width="199px"> 
+						<span class="tag3 special">
+							Auto Magic #777
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Triple Seven All-Purpose Cleaner
+ <span>Cleaners</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$16.49</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Concentrated, cost- effective, all-purpose cleaner</li>
+<li>Removes the toughest dirt & grime from the vehicle</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Triple%207/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div></div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="46glass.jpeg" class="img-responsive" width="199px"> 
+						<span class="tag3 special">
+							Auto Magic #46
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								GLASS CLEANER CONCENTRATE
+ <span>Cleaners</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$29.95</span>
+						</p>
+						<span class="tag1">46</span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>For interior & exterior surfaces like windows, mirrors & chrome</li>
+					<li>Wipes off easily & leaves surfaces sparkling clean</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Glass%20Cleaner/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">5 Gallons</option>5 Gallon,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="500newmagic.jpg" class="img-responsive" width="125px"> 
+						<span class="tag3 special">
+							Auto Magic #502500
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Wheel Magic
+ <span>Cleaners</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$25.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Removes brake dust and other stubborn grime</li>
+					<li>Foaming action for a new-like condition for your tires</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Wheel%20Magic/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="56a.jpg" class="img-responsive" width="120px"> 
+						<span class="tag3 special">
+							Auto Magic #56
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Wash & Wax
+ <span>Soaps & Degreasers</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$31.72</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li> Easy-to-rinse, thick shampoo for cleaning exterior</li>
+<li> Great with acrylic, single-stage paint, lacquer, enamel, wheels</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Wash%20Wax/Untitled-1.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="36a.jpeg" class="img-responsive" width="210px"> 
+						<span class="tag3 special">
+							Auto Magic #36
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Cherry Bubbles
+ <span>Soaps & Degreasers</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$23.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Super- concentrated, car wash soap, has great cleaning capabilities</li>
+<li>Produces long-lasting foam with a great cherry scent</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Cherry%20Bubbles/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail ($105.00)(#36-5)</option>5 Gallon,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="43clear.jpeg" class="img-responsive" width="225px"> 
+						<span class="tag3 special">
+							Auto Magic #43
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Clear Difference Glass Cleaner
+ <span>Cleaners </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$13.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Ready-to use, combines a unique grime fighting formula with streak-free performance</li>
+<li>Great for use on mirrors and chrome</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Clear%20Difference/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="51new.jpg" class="img-responsive" width="115px"> 
+						<span class="tag3 special">
+							Auto Magic #51
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Red Hot
+ <span>Cleaners </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$18.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>A heavy duty, all purpose concentrated cleaner</li>
+<li>Carpets, vinyl, plastic, fabric, upholstery, engines, wheels</li>
+
+
+					</ul>
+						</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Red%20Hot/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+								
+									</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="21new.jpg" class="img-responsive" width="100px"> 
+						<span class="tag3 special">
+							Auto Magic #21
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Fabric & Carpet Cleaner
+ <span>Cleaners </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$19.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Engines, wheels, tires, wheel wells carpet, fabric and vinyl</li>
+						<li>Boats, RVs, Motorcycles, Commercial Vehicles</li>
+						
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Fabric%20Carpet/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="tm101new.jpg" class="img-responsive" width="100px"> 
+						<span class="tag3 special">
+							Auto Magic #TM101
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Tornado Magic
+ <span>Cleaners </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$23.97</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Interior cleaner to use w/ air driven interior detailing tools</li>
+	
+	<li>For use on carpets, fabrics, hard plastics</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Tornado%20Magic/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+							<br>	<p style="font-size: smaller;">
+									<label for="sizes">Select a size below:</label>
+									<select id="size" name="size" size="1">
+									<option value="16oz">16oz</option>
+									<option value="1gallon">1 Gallon</option>
+									<option value="5gallons">Pail</option>
+									<option value="55gallons">55 Gallons</option> 
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="8BEZ.jpg" class="img-responsive" width="160px"> 
+						<span class="tag3 special">
+							Auto Magic #8B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								E-Z Clean HD
+ <span> Cleaners & Soaps </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$22.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Formulated for use on interior fabrics </li>
+
+<li>Excellent on RVs, boats, motorcycles, ATVs, and more.</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/8BEZ/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+									
+										<option value="1gallon">1 Gallon</option>
+										<option value="5gallons">Pail (#8B-5)</option>
+									
+									</select>
+									
+									</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="font-size: 30px; color: black; text-align: left;"><u><i>Clay Lubricant</i></u></p>
+
+<div id="Clay">
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="49.jpg" class="img-responsive" width="75px"> 
+						<span class="tag3 special">
+							Auto Magic #49
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Body Shine
+ <span>Clay Lubricant & Quick Detail Spray</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$34.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Removes smudges, fingerprints, and buffing residue</li>
+<li>Safe to use on acrylic paint, lacquer, enamel</li>
+
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Boostrap/Body%20Shine/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option>
+									
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div></div>
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="502050.jpg" class="img-responsive" width="120px"> 
+						<span class="tag3 special">
+							Auto Magic #502050
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Lubrishine
+ <span>Clay Lubricant and Cleaner</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$36.85</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Silicone Free Finish Shine</li>
+				
+						<li>Remover Finger Prints or Smudges on Paint</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Lubrishine/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="Polishes" style="font-size: 30px; color: black; text-align: left;"><u><i>Polishes & Glazes</i></u></p>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="76GS1.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #76
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								GS-1
+ <span> Polishes & Glazes  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$47.25</span><span>   Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Designed to quickly revive the original luster to lightly oxidized paint</li> 
+<li>Also great for removing medium scratches</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/GS1/index.html" class="btn btn-info">More info</a>
+							
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select an amount below:</label>
+										<select id="size" name="size" size="1">
+										<option value="1">1</option>1
+										<option value="2">2</option> 2,
+										<option value="3">3</option>3,
+										<option value="5+">5+</option> 5+
+									</select>
+									
+									</p></form>
+
+
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="75Awhitemagic.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #75
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								White Magic
+ <span> Polishes & Glazes   </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$47.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Combines the cutting power of a polish with the shine and durability of a paste wax. </li>
+						<li>Safe for use on clear coat and conventional paint finishes. </li>
+						
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/White%20Magic/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz $12.43 (75A)</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<p id="Interiors" style="font-size: 30px; color: black; text-align: left;"><u><i>Interiors</i></u></p>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="stainguard.jpg" class="img-responsive" width="225px"> 
+						<span class="tag3 special">
+							Auto Magic #39
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Stain Guard
+ <span>Interiors</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$56.25</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Spray-on protectant for carpets, upholstery & fabrics</li>
+<li>Special blend to provide maximum protection</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Stain%20Guard/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+									
+									
+							</p></form>
+						
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="57vinyl.jpg" class="img-responsive" width="160px"> 
+						<span class="tag3 special">
+							Auto Magic #57
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								
+VINYL / LEATHER CLEANER <span>Interior</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$13.85</span><span>   Gallon</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Specifically designed for use on automotive interiors</li>
+	<li>Quickly removes stains from all vinyl & leather surfaces</li>
+	
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+                            <a href="file:///C:/Users/16318/Boostrap/Vinyl%20Leather/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select an amount below:</label>
+										<select id="size" name="size" size="1">
+										<option value="1">1</option>1
+										<option value="2">2</option> 2,
+										<option value="3">3</option>3,
+										<option value="5+">5+</option> 5+
+									</select>
+									
+									</p></form>
+
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>	
+
+
+
+
+
+
+
+<p id="Compounds" style="font-size: 30px; color: black; text-align: left;"><u><i>Compounds</i></u></p>
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="99QTmagic.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #99
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								XP Magic Cut
+ <span>Compounds</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$41.55</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Works remarkably fast on all types of cured and fresh paint. </li>
+						<li>Level paint imperfections with little effort and little swirl.</li>
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Magic%20Cut/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz (99QT)</option>
+										<option value="1gallon">1 Gallon</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+						
+									</p></form>
+									
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+			
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="110power.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Auto Magic #110
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Power Cut Plus
+ <span> Compounds</span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$41.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Removing heavy oxidation, acid rain spots, & wash scratches</li> 
+<li>Safe for use on clear coats and conventional paint finishes</li>
+
+
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="file:///C:/Users/16318/Desktop/automagic/Power%20Cut%20Plus/index.html" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br>	<p style="font-size: smaller;">
+										<label for="sizes">Select a size below:</label>
+										<select id="size" name="size" size="1">
+										<option value="16oz">16oz $13.14 (#110A)</option>
+										<option value="1gallon">1 Gallon (#110)</option> 1 Gallon,
+										<option value="5gallons">Pail</option>Pail,
+										<option value="55gallons">55 Gallons</option> 55 Gallon
+									</select>
+										</p></form>
+										
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+<p id="Brushes" style="font-size: 30px; color: black; text-align: left;"><u><i>Brushes & Tools</i></u></p>
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="00413.jpg" class="img-responsive" width="100px"> 
+						<span class="tag3 special">
+							Part #708B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								CAR TRUCK WASH BRUSH
+ <span>Brushes  </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$16.55</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>The 10’ wash brush blue flagged styrene has 3” bristles </li>
+							<li>For minivans, trucks, & other vehicles with hard to reach spots</li>
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5+">5+</option>
+								</select>
+							
+								</p></form>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="00023.jpg" class="img-responsive" width="110px"> 
+						<span class="tag3 special">
+							Part #335
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Do-All Scrubber
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$3.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Multi purpose cleaning.</li>
+						<li>Scrub away bugs, bird droppings & contaminants</li>
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+								
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="0012.jpg" class="img-responsive" width="90px"> 
+						<span class="tag3 special">
+							Part #811
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								WASH MITT
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$4.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Soft and absorbent synthetic wash mitt</li>
+						<li>Made of long lasting, soft synthetic fleece</li>
+					</ul></p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="00500.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #167
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Carpet and Upholstery Brush
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$4.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>For use on fabrics to easily agitate carpets or seats</li>
+<li>Raise handle to prevent from dipping hand into solution</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="15.jpg" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							Part #15B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Round Detail Brush
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$7.25</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Detailing Brush</li>
+<li>Ideal for removing dust from dashboards</li>
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+								
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="6BNP.jpg" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							Part #6BNP
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Black Nylon Plastic Sidewall Brush
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$6.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Black nylon bristles set in a solid plastic block and handle.</li>
+<li>Great for cleaning wheels and tires</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="6BP.jpg" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							Part #6BP
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Foam Plastic Block Brush
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$7.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Filling material is staple set in foam plastic block</li>
+<li>Will not crack when in solution</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								
+								</p></form>
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="6NP.jpg" class="img-responsive" width="150px"> 
+						<span class="tag3 special">
+							Part #6NP
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								White Sidewall Brushes
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$4.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Manufactured to withstand the tough uses of today's professional</li>
+<li>Will not crack in tire solution</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="FG60.jpeg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #FG60
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Safety Yellow Fiberglass Handle
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$12.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Has a structural core center and will not warp or rot</li>
+<li>Special surfacing material prevents splintering</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="180.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #180
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Multi-Purpose Scrub and Upholstery Brush
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$5.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Extreme flare is convenient for scrubbing hard-to-reach places</li>
+<li>Material is  staple set in a foam plastic block</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="8730.jpg" class="img-responsive" width="300px"> 
+						<span class="tag3 special">
+							Part #SQ30
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+							30in. Soft Foam Rubber Steel Frame Squeegee 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$28.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Squeegee for tough work.</li>
+<li>Ideal for workshops and large areas</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="3032.jpg" class="img-responsive" width="175px"> 
+						<span class="tag3 special">
+							Part #3032
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Brush Vehicle Washing Brushes  
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$16.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Use on all types of vehicles</li>
+<li>Protective bumper</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="3033.jpg" class="img-responsive" width="175px"> 
+						<span class="tag3 special">
+							Part #3033
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Green Flagged Wash Brush 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$20.90</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Use on all types of vehicles</li>
+<li>protective bumper</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="6N.jpg" class="img-responsive" width="140px"> 
+						<span class="tag3 special">
+							Part #6N
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Sidewall Brush, Nylon Bristles 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$4.85</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Ideal for cleaning white sidewall tires</li>
+<li>Set in a smooth sanded wax tumbled hardwood block</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="65.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #65B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Fender Brushes Plastic Auto Upholstery
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$5.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>For use in cleaning cars upholstery & floor mats</li>
+<li>Brush is trimmed flat</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="270.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #270
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Stainless Steel Handy Cleaning Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$2.20</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Designed for general cleaning</li>
+<li>For cleaning small parts, seams & soldered joints</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="271.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #271
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								BRASS WIRE BRUSH
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$2.20</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Designed for cleaning small parts and seams</li>
+<li>Toothbrush style plastic handle with brass wire</li>
+
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="238.jpg" class="img-responsive" width="70px"> 
+						<span class="tag3 special">
+							Part #238
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Detail Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$1.50
+								
+							</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>For cleaning around automobile moldings and seams</li>
+<li>Smooth sanded wood handle with tin ferrule</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="239.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #239
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Detail Brush, 3/4" Trim
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$1.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>For cleaning around automobile moldings and seams</li>
+						<li>Smooth sanded wood handle with tin ferrule</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="239DT.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #239DT
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Detail Brush, 1" Trim
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$1.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>For cleaning around automobile moldings and seams</li>
+						<li>Smooth sanded wood handle with tin ferrule with double thickness</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="290.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #290
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Type Inking Auto Detail Brush 
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$2.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Can be used to clean typewriters & type set</li>
+						<li>Designed to clean small parts; joints & seams</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="291.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #291
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Multi-Purpose Cleaning Brushe
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$3.25</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Perfect for fine detail work</li>
+						<li>Dual brush head allows for cleaning in the smallest areas</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="625.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #625
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Wire Wheel Spoke Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$9.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Twisted in wire on plain sanded wood handle</li>
+						<li>Large 11 inches</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="627.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #627
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Spoke Brush Loop
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$3.75</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Black poly bristle twisted in wire on molded handle</li>
+						<li>Soft black poly</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="628.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #628
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Loop Wire Spoke Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$6.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Black poly bristle twisted in wire on molded handle</li>
+						<li>Stiff black poly</li>
+						
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="42.jpg" class="img-responsive" width="180px"> 
+						<span class="tag3 special">
+							Part #42B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Short Handle Green Flagged Chute Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$6.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Will not absorb water</li>
+<li>Recommended for use where sanitation is required</li>
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="43.jpg" class="img-responsive" width="120px"> 
+						<span class="tag3 special">
+							Part #43B
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Green Flagged Plastic Long Handle Foam Plastic Brush
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$8.95</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+						<li>Will not absorb water</li>
+						<li>Recommended for use where sanitation is required</li>
+											</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+<div class="col-xs-12 col-md-6">
+	<!-- First product box start here-->
+	<div class="prod-info-main prod-wrap clearfix">
+		<div class="row">
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="626.jpg" class="img-responsive" width="120px"> 
+						<span class="tag3 special">
+							Part #626
+						</span> 
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil">
+						<h5 class="name">
+							<a href="#">
+								Wire Wheel Spoke Brush 
+ 
+ <span>Brushes </span>
+							</a>
+						</h5>
+						<p class="price-container">
+							<span>$6.50</span>
+						</p>
+						<span class="tag1"></span> 
+				</div>
+				<div class="description">
+					<p><ul>
+<li>Smaller 6 inches</li>
+<li>Twisted in wire on foam plastic handle</li>
+
+					</ul>
+					</p>
+				</div>
+				<div class="product-info smart-form">
+					<div class="row">
+						<div class="col-md-12"> 
+							<a href="javascript:void(0);" class="btn btn-danger">Call to Order</a>
+							<a href="javascript:void(0);" class="btn btn-info">More info</a>
+							<form action="/action_page.php">
+								<br><p style="font-size: smaller;">
+									<label for="sizes">Select an amount below:</label>
+									<select id="size" name="size" size="1">
+									<option value="1">1</option>1,
+									<option value="2">2</option>2,
+									<option value="3">3</option>3,
+									<option value="5+">5+</option> 5+
+								</select>
+								<br><br><br>
+								</p></form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end product -->
+
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+<header>
+	<!-- Content -->
+  </header>
+  
+  <main>
+	<!-- Content -->
+  </main>
+  
+  <footer class="footer">
+	<div class="footer__addr">
+	  <h1 class="footer__logo">AutoMagic of LI</h1>
+		  
+	  <h2>Contact</h2>
+	  
+	  <address>
+		1620 Ocean Avenue Ste. 2, Bohemia, NY<br>
+			
+		<a class="footer__btn" href="mailto:karkaredis@aol.com">Email Us</a>
+	  </address>
+	</div>
+	
+	<ul class="footer__nav">
+	  <li class="nav__item">
+		<h2 class="nav__title">Media</h2>
+  
+		<ul class="nav__ul">
+		  <li>
+			<a href="#">Online</a>
+		  </li>
+  
+		  <li>
+			<a href="#">Print</a>
+		  </li>
+			  
+		  <li>
+			<a href="#">Alternative Ads</a>
+		  </li>
+		</ul>
+	  </li>
+	  
+	  <li class="nav__item nav__item--extra">
+		<h2 class="nav__title">Technology</h2>
+		
+		<ul class="nav__ul nav__ul--extra">
+		  <li>
+			<a href="#">Hardware Design</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Software Design</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Digital Signage</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Automation</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Artificial Intelligence</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">IoT</a>
+		  </li>
+		</ul>
+	  </li>
+	  
+	  <li class="nav__item">
+		<h2 class="nav__title">Legal</h2>
+		
+		<ul class="nav__ul">
+		  <li>
+			<a href="#">Privacy Policy</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Terms of Use</a>
+		  </li>
+		  
+		  <li>
+			<a href="#">Sitemap</a>
+		  </li>
+		</ul>
+	  </li>
+	</ul>
+	
+	<div class="legal">
+	  <p> Copyright&copy; 2022. All rights reserved.</p>
+	  
+	  <div class="legal__links">
+		<span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+	  </div>
+	</div>
+  </footer>
+
+</body>
+</html>
+
